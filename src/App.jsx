@@ -1,89 +1,32 @@
+import CardHeader from './components/CardHeader'
+import CardImage from './components/CardImage'
+import TypeTag from './components/TypeTag'
+import PokeInfo from './components/PokeInfo'
+import CardDescription from './components/CardDescription'
+import TitleStat from './components/TitleStat'
+import PokeStat from './components/PokeStat'
 import './styles.css'
+import Finder from './components/Finder'
 
 function App() {
 
   return (
     <>
+    <Finder/>
       <div className="card">
         <div className="header">
-          <div className="pokemon-name">Oshawott</div>
-          <div className="pokemon-id">#501</div>
+          <CardHeader/>
         </div>
-        <div className="image-container">
-          <div className="circular-progress">
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png"
-              alt="Oshawott"
-              width="200"
-            />
-          </div>
-        </div>
+        <CardImage/>
         <div className="poke-info">
           <div className="types-container">
-            <div className="type water">Water</div>
+            <TypeTag/>
           </div>
-          <div className="basics-info">
-            <div className="icon-color">
-              <i className="fas fa-weight" style={{marginRight: '5px'}}></i>
-              5.9 kg
-            </div>
-            <div className="icon-color">
-              <i className="fas fa-ruler-vertical" style={{marginRight: '5px'}}></i>
-              0.5m
-            </div>
-          </div>
-          <p className="description">
-            La vieira de su ombligo no solo sirve como arma, sino también como
-            instrumento para cortar las bayas que estén duras.
-          </p>
+          <PokeInfo/>
+          <CardDescription/>
           <div className="base-stats">
-            <h4 className="base-stats-title" >Base Stats</h4>
-            <div className="stat">
-              <span className="stat-info">HP</span>
-              <span className="stat-percentage">45</span>
-              <div className="stat-bar" >
-                <div className="stat-fill" style={{width: '45%'}}></div>
-              </div>
-            </div>
-            <div className="stat">
-              <span className="stat-info">ATK</span>
-              <span className="stat-percentage">49</span>
-              <div className="stat-bar">
-                <div className="stat-fill"  style={{width: '49%'}}></div>
-              </div>
-            </div>
-
-            <div className="stat">
-              <span className="stat-info">DEF</span>
-              <span className="stat-percentage">49</span>
-              <div className="stat-bar">
-                <div className="stat-fill"  style={{width: '49%'}}></div>
-              </div>
-            </div>
-
-            <div className="stat">
-              <span className="stat-info">SATK</span>
-              <span className="stat-percentage">65</span>
-              <div className="stat-bar">
-                <div className="stat-fill"  style={{width: '65%'}}></div>
-              </div>
-            </div>
-
-            <div className="stat">
-              <span className="stat-info">SDEF</span>
-              <span className="stat-percentage">65</span>
-              <div className="stat-bar">
-                <div className="stat-fill"  style={{width: '65%'}}></div>
-              </div>
-            </div>
-
-            <div className="stat">
-              <span className="stat-info">SPD</span>
-              <span className="stat-percentage">45</span>
-              <div className="stat-bar">
-                <div className="stat-fill"  style={{width: '65%'}}></div>
-              </div>
-            </div>
+            <TitleStat/>
+            <PokeStat/>
           </div>
         </div>
       </div>
