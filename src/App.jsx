@@ -1,5 +1,5 @@
 import CardHeader from './components/CardHeader'
-import CardImage from './components/CardImage'
+import CardImage from './components/CardImagen'
 import TypeTag from './components/TypeTag'
 import PokeInfo from './components/PokeInfo'
 import CardDescription from './components/CardDescription'
